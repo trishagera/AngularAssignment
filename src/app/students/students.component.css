@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+th, tr, td {
+    border: 1px solid #000000;
+    padding: 10px 35px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+}
+
+.studentTable {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(104, 10, 104);
+    color: white;
+  }

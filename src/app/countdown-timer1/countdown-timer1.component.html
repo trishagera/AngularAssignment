@@ -1,0 +1,29 @@
+
+<div class="container">
+
+    <div class="item">
+        <app-countdown-timer-view [runTimer]="isTimerRunning" 
+                                  [countdown]="timeLimit">
+        </app-countdown-timer-view>
+
+        <app-countdown-timer-logs [logs]="logs">
+        </app-countdown-timer-logs>
+        
+
+    </div>
+    <div class="item">
+        
+        <app-countdown-timer-setting (sendTimerLimit)="setTimerLimit($event)"
+                                     (sendTimerRunningNotification)="setIsTimerRunning($event)"
+                                     (logsEmitter)="setLogs($event)" >
+        </app-countdown-timer-setting>
+
+        <app-countdown-timer-click-logs [pausedCounter]="pausedCounter"
+                                        [startedCounter]="startedCounter">
+        </app-countdown-timer-click-logs>
+
+    </div>
+
+
+
+</div>

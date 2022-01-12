@@ -1,0 +1,17 @@
+.countdown-click-logs {
+    margin: 2px;
+    height: 250px;
+    overflow: auto;
+    width: 44vw;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.item {
+    margin: 10px;
+    padding: 10px;
+}

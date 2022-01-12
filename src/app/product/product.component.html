@@ -1,0 +1,61 @@
+<div class="product-screen">
+  <h2 *ngIf="isList; else gridHeader">List View</h2>
+  
+  <ng-template #gridHeader>
+    <h2>Grid View</h2>
+  </ng-template>
+
+  <p>Click on a button to choose list view or grid view.</p>
+
+  <div class="container">
+    <button class="btn" [ngClass]="isList ? 'active' : '' " (click)="listView()"><i class="fa fa-bars"></i> List</button> 
+    <button class="btn" [ngClass]="isList ? '' : 'active' " (click)="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+
+    <select name="priceFilter" id="priceFilter" [(ngModel)]="priceFilter" (ngModelChange)="onSelectionChange()" >
+      <option [value]="0" [selected]="priceFilter === '0'">-Select Price Filter-</option>
+      <option [value]="1" [selected]="priceFilter === '1'">Price: LOW TO HIGH</option>
+      <option [value]="2" [selected]="priceFilter === '2'">Price: HIGH TO LOW</option>
+    </select>
+    <br><br>
+  </div>
+  <div class="clear"></div>
+
+  <div class="products-container">
+      <ng-container *ngIf="products && products.length > 0; else noResults">
+        <!-- list view -->
+        <div *ngIf="isList; else gridView" #listView>
+          <div class="flex-list-container">
+            <div *ngFor="let product of products"class="column">
+              <h4>Product: {{product.product}}</h4>
+              <p>Price: {{product.price}}</p>
+            </div>
+          </div>
+            
+      </div>
+      <!-- list view ends -->
+
+      <!-- grid view -->
+      <ng-template #gridView>
+        <div>
+          <div class="flex-grid-container">
+            <div *ngFor="let product of products"class="column">
+              <h4>Product: {{product.product}}</h4>
+              <p>Price: {{product.price}}</p>
+            </div>
+          </div>
+        </div>
+
+      </ng-template>
+      <!-- grid view ends -->
+      </ng-container>
+
+      <ng-template #noResults>
+        <h2>NO RESULTS</h2>
+      </ng-template>
+
+  </div>
+
+
+
+  
+</div>

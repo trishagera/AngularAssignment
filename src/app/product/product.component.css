@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    width: 50%;
+    padding: 2px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+  
+
+.flex-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.flex-list-container > div {
+    background-color: rgb(247, 203, 247);
+    width: 45%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+  }
+
+  .flex-grid-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.flex-grid-container > div {
+    background-color: rgb(247, 203, 247);
+    width: 20%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
+  }
+
+select {
+  margin: 5px;
+  padding: 6px 6px;
+}
+
+.container {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.product-screen {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.products-container {
+  border: 0.5px solid lightgray;
+}

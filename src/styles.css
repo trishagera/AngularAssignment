@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+a:link, a:visited  {
+    text-decoration: none!important;
+}
+
+li a:visited {
+    text-decoration: none;
+}
+
+.btn-primary {
+    padding: 5px 30px;
+    background-color: rgba(134, 0, 134, 0.966);
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 2px 12px;
+    margin: 5px;
+    font-size: 16px;
+}

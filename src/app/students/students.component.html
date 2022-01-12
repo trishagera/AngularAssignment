@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="studentTable">
+        <tr>
+            <th *ngFor="let header of headers">{{header | uppercase}}
+                <i class="fa" [ngClass]="{'fa-minus ': header !== sortedHeader ,'fa-chevron-up ' : header == sortedHeader && sequence == 'asc' , 'fa-chevron-down ' : sequence == 'desc' && header == sortedHeader }" (click)="sort(header)"></i>
+            </th>
+        </tr>
+        <tr *ngFor="let student of studentData">
+            <td>{{student.name }}</td>
+            <td>{{student.class }}</td>
+            <td>{{student.section }}</td>
+            <td>{{student.english }}</td>
+            <td>{{student.maths }}</td>
+            <td>{{student.science }}</td>
+        </tr>
+    </table>
+</div>
+  
+  

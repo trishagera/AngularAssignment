@@ -1,0 +1,8 @@
+
+<div class="countdown-logs">
+    <div class="item">
+        <div  *ngFor="let log of logs">
+            {{log.event}} at {{log.timeStamp | date: 'MM-dd-yyyy HH:mm:ss a'}}
+        </div>
+    </div>
+</div>

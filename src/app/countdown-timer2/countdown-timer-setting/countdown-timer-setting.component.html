@@ -1,0 +1,10 @@
+<div class="countdown-setting">
+    <div>
+        <label>Enter Time Limit: </label>
+        <input type="number" name="timerLimit" [(ngModel)]="timerLimit" (blur)="setTimerLimit()">
+    </div>
+    <div>
+        <button class="btn" [disabled]="timerLimit <= 0" (click)="onStartOrPause()">{{isTimerRunning ? 'Pause' : 'Start'}}</button>
+        <button class="btn" (click)="onResetClicked()">Reset</button>
+    </div>
+</div>
